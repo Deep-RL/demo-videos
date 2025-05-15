@@ -2,32 +2,18 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description"
-        content="Removing human figures from LIDAR using PointTransformerV3">
-  <meta name="keywords" content="LIDAR, PointTransformerV3, PtV3">
+  <meta name="description" content="Deep-RL: algorithms comparison">
+  <meta name="keywords" content="Deep-RL, PPO, SAC, TD3, DQN">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Removing human figures from LIDAR</title>
+  <title>Deep-RL: videos demonstration</title>
 
-
-  </script>
-
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
 </head>
 <body>
 
@@ -38,37 +24,10 @@
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">Removing human figures from LIDAR</h1>
           <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <!-- <a href="https://sylvainbrt.github.io/">Sylvain Beuret</a><sup>1</sup></span> -->
-               Sylvain Beuret</span>
+            <span class="author-block">Sylvain Beuret, Hugo Leroy, Nathan Kack Kack, Maksymiliann Schoeffel</span>
           </div>
-
           <div class="is-size-5 publication-authors">
             <span class="author-block">École Polytechnique Fédérale de Lausanne</span>
-          </div>
-
-            <div class="column has-text-centered"></div>
-            <div class="publication-links">
-              <!-- PDF Download Link. -->
-              <span class="link-block">
-                <a href="./static/pdfs/Removing_human_figure_on_Lidar.pdf" download
-                   class="external-link button is-normal is-rounded is-dark">
-                  Download Report
-                </a>
-              </span>
-
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://github.com/lidarhumanremoval/Lidar-Human-Removal"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                  </a>
-              </span>
-            </div>
-
           </div>
         </div>
       </div>
@@ -76,198 +35,75 @@
   </div>
 </section>
 
-
-
-
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            The use of light detection and ranging (LIDAR) sensors has increased in autonomous robots and vehicles, mainly for its ability to capture depth values and working in low-light conditions. Therefore, algorithms capable of processing the
-            resulting 3D point cloud data are necessary. In this project, we used Point Transformer V3 and the Waymo Open Dataset to develop a segmentation model that
-            specifically targets humans. The ultimate goal is to next remove human figures
-            from data captured by an Ouster LIDAR. This task is part of a broader development
-            of a student-designed autonomous rover for the European Rover Challenge. During
-            the competition, referees move freely, often interfering with obstacle detection
-            systems. This specific task of human detection is also crucial for the general autonomous vehicle development, notably for the security.
+            Tiny Description
           </p>
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
   </div>
 </section>
-
 
 <section class="section">
   <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-    <!-- Videos. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Demonstrations</h2>
-
-        <!-- Labelled. -->
         <h3 class="title is-4">Labelled sequences</h3>
         <div class="content has-text-justified">
           <p>
-            These are exemples of the captured sequences with the human figures manually labelled. 
+            These are examples of the captured sequences with the human figures manually labelled. 
           </p>
         </div>
 
         <section class="hero is-light is-small">
           <div class="hero-body">
             <div class="container">
-              <div id="results-carousel" class="carousel results-carousel">
-                <div class="item item-steve">
-                  <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-                    <source src="./static/videos/label_in_1.mp4"
-                            type="video/mp4">
-                  </video>
-                </div>
-                <div class="item item-chair-tp">
-                  <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-                    <source src="./static/videos/label_in_2.mp4"
-                            type="video/mp4">
-                  </video>
-                </div>
-                <div class="item item-shiba">
-                  <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-                    <source src="./static/videos/label_in_3.mp4"
-                            type="video/mp4">
-                  </video>
-                </div>
-                <div class="item item-fullbody">
-                  <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-                    <source src="./static/videos/label_in_4.mp4"
-                            type="video/mp4">
-                  </video>
-                </div>
-                <div class="item item-fullbody">
-                  <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-                    <source src="./static/videos/label_out.mp4"
-                            type="video/mp4">
-                  </video>
-                </div>
-              </div>
-            </div>
-          </div>
-        
-        <br/>
-        <!--/ Labelled. -->
-
-        <!-- segmented. -->
-        <h3 class="title is-4">Segmented sequences</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using the Point Transformer V3 model, we were able to segment the human figures from the sequences. Showing the results of the segmentation model.
-          </p>
-        </div>
-
-        <section class="hero is-light is-small">
-          <div class="hero-body">
-            <div class="container">
-              <div id="results-carousel" class="carousel results-carousel">
-                <div class="item item-shiba">
-                  <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-                    <source src="./static/videos/out_seg_over.mp4"
-                            type="video/mp4">
-                  </video>
-                </div>
-                <div class="item item-fullbody">
-                  <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-                    <source src="./static/videos/out_seg_side.mp4"
-                            type="video/mp4">
-                  </video>
-                </div>
-                <div class="item item-chair-tp">
-                  <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-                    <source src="./static/videos/seg_out.mp4"
-                            type="video/mp4">
-                  </video>
-                </div>
-                <div class="item item-chair-tp">
-                  <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-                    <source src="./static/videos/inside_moving_seg.mp4"
-                            type="video/mp4">
-                  </video>
-                </div>
-                <div class="item item-chair-tp">
-                  <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-                    <source src="./static/videos/seg_in_1.mp4"
-                            type="video/mp4">
-                  </video>
-                </div>
-                <div class="item item-chair-tp">
-                  <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-                    <source src="./static/videos/seg_in_2.mp4"
-                            type="video/mp4">
-                  </video>
-                </div>
-                <div class="item item-steve">
-                  <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-                    <source src="./static/videos/inside_corridor_seg.mp4"
-                            type="video/mp4">
-                  </video>
-                </div>
+              <div class="video-container">
+                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/out_seg_over.mp4" type="video/mp4">
+                </video>
+                <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/out_seg_over.mp4" type="video/mp4">
+                </video>
+                <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/out_seg_over.mp4" type="video/mp4">
+                </video>
+                <video poster="" id="fullbody-1" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/out_seg_over.mp4" type="video/mp4">
+                </video>
+                <video poster="" id="fullbody-2" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/out_seg_over.mp4" type="video/mp4">
+                </video>
               </div>
             </div>
           </div>
         </section>
-        <!--/ segmented. -->
-
-        <!-- Removed. -->
-        <h3 class="title is-4">Removed sequences</h3>
-        <div class="content has-text-justified">
-          <p>
-            In the last part, points classified as human figures are removed from the sequences. As stated in the report, the model works well in a 4-5 meters range, mainly due to the sensor used, and when human figures are not obstructed by other objects.
-          </p>
-        </div>
-
-        <section class="hero is-light is-small">
-          <div class="hero-body">
-            <div class="container">
-              <div id="results-carousel" class="carousel results-carousel">
-                <div class="item item-shiba">
-                  <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-                    <source src="./static/videos/removed_out_1.mp4"
-                            type="video/mp4">
-                  </video>
-                </div>
-                <div class="item item-fullbody">
-                  <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-                    <source src="./static/videos/removed_out_2.mp4"
-                            type="video/mp4">
-                  </video>
-                </div>
-                <div class="item item-chair-tp">
-                  <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-                    <source src="./static/videos/removed_in_1.mp4"
-                            type="video/mp4">
-                  </video>
-                </div>
-                <div class="item item-chair-tp">
-                  <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-                    <source src="./static/videos/removed_in_2.mp4"
-                            type="video/mp4">
-                  </video>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!--/ Removed. -->
-
       </div>
     </div>
   </div>
 </section>
 
+<style>
+  .video-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .video-container video {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+  }
+</style>
 
 </body>
 </html>
